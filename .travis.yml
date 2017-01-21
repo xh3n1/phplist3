@@ -29,7 +29,8 @@ before_script:
 
 script:
   - vendor/bin/phpLint ./public_html
-  - vendor/bin/behat
+  - tests/multiconfig.sh
+#  - vendor/bin/behat
 
 after_failure:
   - echo "Failures detected. Outputing additional logs:"
