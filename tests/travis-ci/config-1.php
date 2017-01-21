@@ -1,5 +1,7 @@
 <?php
 
+## Basic install
+
 $database_host = 'localhost';
 $database_name = 'phplistdb';
 $database_user = 'travis';
