@@ -8,6 +8,9 @@ php:
   - 5.4
   - 5.3
 
+services:
+  - mysql
+
 before_script:
   - sudo apt-get update > /dev/null
   - sudo apt-get install -y --force-yes apache2 libapache2-mod-php5 php5-curl php5-mysql php5-intl
@@ -26,6 +29,9 @@ before_script:
   # Set MySQL configuration and create the database.
   - mysql -e 'SET GLOBAL wait_timeout = 5400;'
   - mysql -e 'create database phplistdb;'
+  # fetch the dressprow theme
+  - wget https://github.com/phpList/phplist-ui-dressprow/archive/master.zip
+  - unzip master.zip -d  public_html/lists/admin/ui/
 
 script:
   - vendor/bin/phpLint ./public_html
