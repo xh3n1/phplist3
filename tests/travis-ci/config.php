@@ -14,3 +14,4 @@ $bounce_mailbox_user = 'popuser';
 $bounce_mailbox_password = 'password';
 $bounce_mailbox_port = '110/pop3/notls';
 
+$GLOBALS['ui'] = 'dressprow';

@@ -32,6 +32,8 @@ before_script:
   # fetch the dressprow theme
   - wget https://github.com/phpList/phplist-ui-dressprow/archive/master.zip
   - unzip master.zip -d  public_html/lists/admin/ui/
+  - mv public_html/lists/admin/ui/phplist-ui-dressprow-master public_html/lists/admin/ui/dressprow
+  - ls -l public_html/lists/admin/ui/
 
 script:
   - vendor/bin/phpLint ./public_html
