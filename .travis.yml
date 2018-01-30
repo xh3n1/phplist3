@@ -27,6 +27,7 @@ before_script:
   - sudo /etc/init.d/apache2 restart
   - sudo cp -f tests/travis-ci/behat.yml behat.yml
   - sudo cp -f tests/travis-ci/config.php public_html/lists/config/config.php
+  - mkdir /home/travis/build/xh3n1/phplist3/logs/ 
   - composer self-update
   - composer install --prefer-dist
   - cd vendor/bin && ln -s ../njoannidi/php-lint-bash/phpLint && cd ../../
