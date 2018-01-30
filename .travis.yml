@@ -48,6 +48,7 @@ before_script:
   - curl -v http://localhost/lists/
   - curl -v http://phplist.dev/lists/
   - curl -v http://127.0.0.1/lists/
+  - curl -v http://127.0.0.1/lists/admin/
 script:
   - vendor/bin/phpLint ./public_html
   - vendor/bin/behat
