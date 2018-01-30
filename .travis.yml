@@ -42,7 +42,7 @@ before_script:
 script:
   - vendor/bin/phpLint ./public_html
   - vendor/bin/behat
-  - vendor/bin/upload-textfiles "logs/.log"
+  - vendor/bin/upload-textfiles "logs/*.log"
 after_failure:
   - echo "Failures detected. Outputing additional logs:"
   - sudo ls -l /etc/apache2/sites-available/
