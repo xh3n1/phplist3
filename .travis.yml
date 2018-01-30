@@ -24,6 +24,7 @@ before_script:
   - sudo sed -i -e "/DocumentRoot/i\ServerName phplist.dev" /etc/apache2/sites-available/000-default.conf 
   - sudo sed -i -e "s,/var/www,$(pwd)/public_html,g" /etc/apache2/apache2.conf
   - echo "127.0.0.1 phplist.dev" | sudo tee -a /etc/hosts
+  - sudo chmod o+rx /home/travis
   - sudo /etc/init.d/apache2 restart
   - sudo cp -f tests/travis-ci/behat.yml behat.yml
   - sudo cp -f tests/travis-ci/config.php public_html/lists/config/config.php
