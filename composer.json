@@ -18,7 +18,8 @@
   },
   "minimum-stability": "dev",
   "require": {
-    "php": ">= 5.3.3, <= 7.1.99"
+    "php": ">= 5.3.3, <= 7.1.99",
+    "lakion/mink-debug-extension": "^1.2"
   },
   "require-dev": {
     "behat/mink": "@stable",

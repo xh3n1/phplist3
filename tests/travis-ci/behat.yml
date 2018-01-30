@@ -14,6 +14,8 @@ default:
                     admin_username : admin
                     admin_password : Mypassword123+
     extensions:
+        Lakion\Behat\MinkDebugExtension:
+            directory: logs/
         Behat\MinkExtension:
             # Change to you custom url:
             base_url:  'http://phplist.dev'
