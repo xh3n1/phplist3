@@ -12,6 +12,8 @@ sudo: required
 addons:
   # For testing with Selenium
   chrome: stable
+before_install:
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 > /dev/null 2>&1 &
 before_script:
   # Set Uploadpie auth key in behat config file via env var
   - sudo apt-get update > /dev/null

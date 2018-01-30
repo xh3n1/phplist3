@@ -14,22 +14,12 @@ default:
                     admin_username : admin
                     admin_password : Mypassword123+
     extensions:
-        Lakion\Behat\MinkDebugExtension:
-            directory: /home/travis/build/xh3n1/phplist3/logs/
+        DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
         Behat\MinkExtension:
-            # Change to you custom url:
-            base_url:  'http://phplist.dev'
-            show_auto: false
-            show_cmd: google-chrome %s
-            browser_name: 'chrome'
+            browser_name: chrome
+            base_url: http://phplist.dev
             sessions:
                 default:
-                    selenium2:
-                        browser: chrome
-                        wd_host: http://localhost:4444/wd/hub
-                        capabilities:
-                            chrome:
-                                switches:
-                                    - "--headless"
-                                    - "--disable-gpu"
+                    chrome:
+                      api_url: http://localhost:9222
         

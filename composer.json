@@ -19,7 +19,8 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">= 5.3.3, <= 7.1.99",
-    "lakion/mink-debug-extension": "^1.2"
+    "lakion/mink-debug-extension": "^1.2",
+    "dmore/chrome-mink-driver": "^2.6"
   },
   "require-dev": {
     "behat/mink": "@stable",
