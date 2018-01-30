@@ -41,12 +41,12 @@ before_script:
   # Start xvfb (for use with Selenium)
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - curl -v http://localhost/
-  - curl -v http://phplist.dev/
-  - curl -v http://127.0.0.1/
-  - curl -v http://localhost/list
-  - curl -v http://phplist.dev/list
-  - curl -v http://127.0.0.1/list
+  - curl -v http://localhost/index.html
+  - curl -v http://phplist.dev/index.html
+  - curl -v http://127.0.0.1/index.html
+  - curl -v http://localhost/lists/
+  - curl -v http://phplist.dev/lists/
+  - curl -v http://127.0.0.1/lists/
 script:
   - vendor/bin/phpLint ./public_html
   - vendor/bin/behat
