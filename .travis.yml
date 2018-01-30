@@ -51,7 +51,6 @@ before_script:
 script:
   - vendor/bin/phpLint ./public_html
   - vendor/bin/behat --tags '@first-run'
-  - vendor/bin/behat --tags '~@first-run'
   - vendor/bin/upload-textfiles "logs/*.log"
 after_failure:
   - echo "Failures detected. Outputing additional logs:"
