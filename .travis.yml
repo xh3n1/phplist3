@@ -28,12 +28,6 @@ before_script:
   - sudo cp -f tests/travis-ci/behat.yml behat.yml
   - sudo cp -f tests/travis-ci/config.php public_html/lists/config/config.php
   - mkdir /home/travis/build/xh3n1/phplist3/logs/ 
-  - curl -v http://localhost/
-  - curl -v http://phplist.dev/
-  - curl -v http://127.0.0.1/
-  - curl -v http://localhost/list
-  - curl -v http://phplist.dev/list
-  - curl -v http://127.0.0.1/list
   - composer self-update
   - composer install --prefer-dist
   - cd vendor/bin && ln -s ../njoannidi/php-lint-bash/phpLint && cd ../../
@@ -46,6 +40,12 @@ before_script:
   # Start xvfb (for use with Selenium)
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
+  - curl -v http://localhost/
+  - curl -v http://phplist.dev/
+  - curl -v http://127.0.0.1/
+  - curl -v http://localhost/list
+  - curl -v http://phplist.dev/list
+  - curl -v http://127.0.0.1/list
 script:
   - vendor/bin/phpLint ./public_html
   - vendor/bin/behat
