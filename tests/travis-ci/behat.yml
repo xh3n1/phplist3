@@ -24,7 +24,12 @@ default:
             browser_name: 'chrome'
             sessions:
                 default:
-                    #goutte: ~
                     selenium2:
-                        capabilities: { "browser": "chrome" }
+                        browser: chrome
+                        wd_host: http://localhost:4444/wd/hub
+                        capabilities:
+                            chrome:
+                                switches:
+                                    - "--headless"
+                                    - "--disable-gpu"
         
